@@ -1,0 +1,108 @@
+/* Tarjeta de inicio de sesión */
+.login-container {
+  background:  #f0efeb;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px #b8e0d2, 0 0 40px #809bce inset;
+  width: 300px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: black;
+  text-shadow: 0 0 5px gray;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background:  #f0efeb;
+  border: 1px solid #daeaf6;
+  border-radius: 8px;
+  color: black;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.login-container input[type="email"]:focus,
+.login-container input[type="password"]:focus {
+  box-shadow: 0 0 10px #daeaf6;
+  border-color: #809bce;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #daeaf6, #809bce);
+  border: none;
+  border-radius: 8px;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.login-container button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #daeaf6;
+}
+
+.register-link {
+  margin-top: 20px;
+  font-size: 14px;
+  color: black;
+}
+
+.register-link a {
+  color: black;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.register-link a:hover {
+  color: black;
+}
+
+/* Tablet: hasta 768px */
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%;
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 30px;
+  }
+}
+
+/* Celulares: hasta 375px */
+@media (max-width: 375px) {
+  .login-container {
+    width: 90%;
+    margin: 60px auto;
+    padding: 20px;
+  }
+
+  .login-container h2 {
+    font-size: 20px;
+  }
+
+  .login-container input[type="email"],
+  .login-container input[type="password"] {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .login-container button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .register-link {
+    font-size: 13px;
+  }
+}

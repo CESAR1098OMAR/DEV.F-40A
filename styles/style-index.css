@@ -1,0 +1,147 @@
+/* =================== BASE =================== */
+.card {
+    max-width: 900px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* HEADER */
+.card-header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-header img {
+    height: 50px;
+    border-radius: 50%;
+}
+
+.card-header h3 {
+    flex: 1;
+}
+
+/* DESCRIPTION */
+.card-description {
+    padding: 10px;
+    text-align: justify;
+}
+
+/* IMAGE */
+.card-img {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-img img {
+    width: 90%;
+    border-radius: 5%;
+}
+
+/* ACTIONS */
+.card-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.card-actions button {
+    border-radius: 10px;
+    border: .5px black solid;
+    background: whitesmoke;
+    padding: 5px 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.card-actions button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    transition: width 0.5s ease;
+    z-index: -1;
+}
+
+.card-actions button:hover::before {
+    width: 100%;
+}
+
+.like::before { background: linear-gradient(90deg, #4caf50, #81c784); }
+.noLike::before { background: linear-gradient(90deg, #e53935, #ef5350); }
+.share::before { background: linear-gradient(90deg, #1e88e5, #64b5f6); }
+
+/* =================== RESPONSIVE =================== */
+
+/* Tablets ≤768px */
+@media (max-width: 768px) {
+    .card {
+        padding: 12px;
+        margin: 15px auto;
+    }
+
+    .card-header h3 {
+        font-size: 16px;
+    }
+
+    .card-description {
+        font-size: 14px;
+    }
+
+    .card-actions button {
+        font-size: 13px;
+        padding: 6px 8px;
+    }
+}
+
+/* Celulares ≤375px */
+@media (max-width: 375px) {
+    .card {
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+    }
+
+    .card-header img {
+        margin: 0;
+    }
+
+    .card-header h3 {
+        font-size: 14px;
+    }
+
+    .card-description {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .card-actions {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .card-actions button {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+}

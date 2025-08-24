@@ -1,0 +1,133 @@
+.grid-main {
+    display: grid;
+    grid-template-columns: 2fr 6fr;
+    grid-template-rows: auto;
+    height: auto;
+    grid-template-areas: "aplicacion caja";
+    gap: 20px;
+    padding: 20px;
+}
+
+.aplicacion-comentarios {
+  grid-area: aplicacion;
+}
+
+.caja-comentarios {
+    grid-area: caja;
+}
+
+/* ===== FORMULARIO ===== */
+form {
+  background: transparent;
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+input, textarea, button {
+  background: transparent;
+  padding: 10px; 
+  border: 1px solid navy;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input, textarea {
+  width: 100%;
+  max-width: 100%;
+}
+
+#comentario {
+  resize: none;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #357638;
+}
+
+/* ===== CAJA DE COMENTARIOS ===== */
+.titulo {
+  width: 100%;
+  max-width: 500px;
+  margin: 15px auto;
+  padding: 10px;
+}
+
+.titulo h2, 
+.titulo p {
+  text-align: center;
+}
+
+@keyframes fadeSlideUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.titulo h2, .titulo p {
+  animation: fadeSlideUp 1s ease-out;
+  animation-fill-mode: both;
+}
+
+.titulo p {
+  animation-delay: 0.6s;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablets (≤768px) */
+@media (max-width: 768px) {
+  .grid-main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "aplicacion"
+      "caja";
+  }
+
+  form, .titulo {
+    max-width: 90%;
+  }
+}
+
+/* Celulares (≤375px) */
+@media (max-width: 375px) {
+  .grid-main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "aplicacion"
+      "caja";
+    padding: 10px;
+  }
+
+  form {
+    padding: 15px;
+  }
+
+  .titulo {
+    padding: 5px;
+    max-width: 95%;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}

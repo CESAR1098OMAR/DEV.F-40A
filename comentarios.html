@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./apps/app-comentarios.js" defer></script>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/style-comentarios.css">
+    <link rel="icon" href="./images/logo.jpg" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <header class="grid-header">
+            <div class="logo">
+                <a href="./index.html">
+                    <h1>HARTEN</h1>
+                    <p>Solutions of all kinds</p>                    
+                </a>
+            </div>
+        </header>
+        <aside class="grid-aside">
+            <a href="./valores.html">Nuestros valores</a>
+            <a href="./comentarios.html">Clientes satisfechos</a>
+            <a href="./usuario.html">Iniciar Sesión</a>
+        </aside>        
+        <main class="grid-main">
+            <div class="aplicacion-comentarios">
+                <form id="miFormulario" method="post">
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" required><br>
+
+                    <label for="telefono">Teléfono:</label><br>
+                    <input type="tel" id="telefono" name="telefono" required><br>
+
+                    <label for="correo">Correo:</label><br>
+                    <input type="email" id="correo" name="correo" required><br>
+
+                    <label for="comentario">Comentario:</label><br>
+                    <textarea id="comentario" name="comentario" rows="4" cols="40" required></textarea><br>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="caja-comentarios">
+                <div class="titulo">
+                    <h2>Tus comentarios.</h2>
+                    <p>Recuerda que tú eres lo más importante para nosotros. 😉 </p>
+                    <div class="comentarios">
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+
+        <footer class="grid-footer">
+            © Todos los derechos reservados
+        </footer>
+        
+    </div>
+</body>
+</html>
